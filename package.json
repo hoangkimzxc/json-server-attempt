@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon main.js",
-    "start": "npm run generate-data && node main.js",
+    "start": "npm run generate-data && node main.js json-server --watch db.json",
     "generate-data": "node generate-data.js"
   },
   "keywords": [
