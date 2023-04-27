@@ -1,0 +1,58 @@
+@baseUrl=http://localhost:3000/api
+
+@resourceName=products
+
+#Products
+
+# @name getAll
+GET {{baseUrl}}/{{resourceName}}
+
+###
+# @name filterProductsColor
+GET {{baseUrl}}/{{resourceName}}?color=sky%20blue
+
+###
+# @name filterProductsByPriceGreaterThan500
+GET {{baseUrl}}/{{resourceName}}?price_gte=500
+
+###
+# @name filterProductsByNameWithLetters
+GET {{baseUrl}}/{{resourceName}}?name_like=up
+
+###
+# @name pagination
+GET {{baseUrl}}/{{resourceName}}?_page=1&_limit=5
+
+###
+# @name sort
+GET {{baseUrl}}/{{resourceName}}?_sort=price&_order=desc
+
+###
+# @name addNew
+POST {{baseUrl}}/{{resourceName}}
+Content-Type: application/json
+
+{
+    "categoryId": "19fe0337-3412-4803-99a7-895688767284",
+    "name": "reff Steel Pizza",
+    "color": "teal",
+    "price": "3.00",
+    "description": "dsshoes & sandals",
+    "thumbnailUrl": "http://placeimg.com/400/400"
+}
+
+###
+# @name update
+PATCH {{baseUrl}}/{{resourceName}}/KtbsFew
+Content-Type: application/json
+
+{
+    "name": "upreff Steel Pizza",
+    "color": "red",
+    "price": "329.00"
+}
+
+###
+
+# @name remove
+DELETE {{baseUrl}}/{{resourceName}}/KtbsFew
