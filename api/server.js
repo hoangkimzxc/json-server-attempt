@@ -58,3 +58,5 @@ server.use('/api', router)
 server.listen(PORT, () => {
     console.log('JSON Server is running')
 })
+
+export default server

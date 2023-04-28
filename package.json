@@ -2,13 +2,12 @@
   "name": "json-server-demo",
   "version": "1.0.0",
   "description": "demo how to use json-server",
-  "main": "main.js",
+  "main": "api/server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon main.js",
-    "start": "node main.js",
-    "generate-data": "node generate-data.js"
+    "start": "node api/server.js"
   },
   "keywords": [
     "json-server"
